@@ -228,3 +228,32 @@
     transform: rotate(0deg);
   }
 }
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blogCard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.readMore {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.readMore a {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.readMore a:hover {
+  background-color: #005bb5;
+}
