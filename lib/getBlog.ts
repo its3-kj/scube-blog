@@ -6,8 +6,15 @@ export type Blog = {
   content: string;
   excerpt: string;
   publishedAt: string;
-  categories: [];
+  categories: Category[];
   slug: string;
+};
+
+export type Category = {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
 };
 
 export const getBlogs = async (): Promise<Blog[]> => {
@@ -31,7 +38,7 @@ export const getBlogsByCategory = async (category: string): Promise<Blog[]> => {
   return response.contents;
 };
 
-export const getALLCategories = async (limit = 100) => {
+export const getALLCategories = async (limit = 100): Promise<Category[]> => {
   const response = await client.get({
     endpoint: "categories",
     queries: { fields: "name,id,slug", limit },

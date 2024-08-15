@@ -1,6 +1,12 @@
 import React from "react";
-import { getBlogs } from "@/lib/getBlog";
+import { type Blog, getBlogs } from "@/lib/getBlog";
 import Link from "next/link";
+
+interface List {
+  id: string;
+  title: string;
+  categoryName: string;
+}
 
 const BlogArticlePage = async ({
   params,
@@ -8,7 +14,7 @@ const BlogArticlePage = async ({
   params: { category: string };
 }) => {
   const blogs = await getBlogs();
-  const list = [];
+  const list: List[] = [];
   blogs.map((blog) => {
     blog.categories.map((cat) => {
       if (cat.slug === params.category) {
