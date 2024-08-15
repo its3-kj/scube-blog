@@ -6,10 +6,15 @@ export type Blog = {
   content: string;
   excerpt: string;
   publishedAt: string;
+  categories: [];
+  slug: string;
 };
 
 export const getBlogs = async (): Promise<Blog[]> => {
-  const response = await client.get({ endpoint: "blogs" });
+  const response = await client.get({
+    endpoint: "blogs",
+    queries: { limit: 100 },
+  });
   return response.contents;
 };
 
@@ -21,7 +26,15 @@ export const getBlogById = async (id: string): Promise<Blog> => {
 export const getBlogsByCategory = async (category: string): Promise<Blog[]> => {
   const response = await client.get({
     endpoint: "blogs",
-    queries: { filters: `category[equals]${category}` },
+    queries: { filters: `slug[equals]${category}` },
+  });
+  return response.contents;
+};
+
+export const getALLCategories = async (limit = 100) => {
+  const response = await client.get({
+    endpoint: "categories",
+    queries: { fields: "name,id,slug", limit },
   });
   return response.contents;
 };
