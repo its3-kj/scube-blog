@@ -3,7 +3,7 @@ import { getBlogs } from "@/lib/getBlog";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
   const blogUrls = blogs.map((post) => ({
-    url: `https://blog.it-scube.com//blog/${post.id}`,
+    url: `https://blog.it-scube.com/blog/${post.id}`,
     lastModified: new Date(post.publishedAt),
   }));
 
