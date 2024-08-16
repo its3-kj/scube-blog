@@ -10,6 +10,8 @@
 
 .logoLink {
   display: flex;
+  height: 48px;
+  font-size: 36px;
 }
 
 .logo {
@@ -27,6 +29,14 @@
 
 @media (max-width: 640px) {
   .header {
-    padding: 24px 16px 8px;
+    padding: 8px 16px 8px;
+  }
+  /* .logo {
+    height: 16px;
+    width: auto;
+  } */
+  .logoLink {
+    height: 24px;
+    font-size: 20px;
   }
 }

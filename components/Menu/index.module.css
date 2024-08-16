@@ -18,7 +18,7 @@
   .nav.open {
     display: block;
     position: fixed;
-    top: 50px;
+    top: 40px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -29,7 +29,7 @@
 
   .items {
     padding: 10px;
-    width: 25%;
+    width: 30%;
     background-color: rgb(236, 220, 223, 75%);
     flex-direction: column;
     gap: 24px;
