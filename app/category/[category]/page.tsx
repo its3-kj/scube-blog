@@ -1,6 +1,12 @@
 import React from "react";
-import { type Blog, getBlogs } from "@/lib/getBlog";
+import { getBlogs } from "@/lib/getBlog";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "カテゴリ | IT Scube",
+  description: "カテゴリのページ",
+};
 
 interface List {
   id: string;

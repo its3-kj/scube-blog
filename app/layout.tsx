@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
-// const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "IT Scube",
-  description: "IT導入を全力サポート!",
+  title: "IT Scube Blog",
+  description: "ITに関する日々の備忘録",
+  openGraph: {
+    title: "IT Scube Blog",
+    description: "ITに関する日々の備忘録",
+    url: "https://blog.it-scube.com/",
+    images: [
+      {
+        url: "https://blog.it-scube.com/ogp.png",
+        width: 800,
+        height: 600,
+        alt: "IT Scube Blog",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
