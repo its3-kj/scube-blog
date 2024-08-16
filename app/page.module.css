@@ -108,6 +108,36 @@
 .logo {
   position: relative;
 }
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blogCard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.readMore {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.readMore a {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.readMore a:hover {
+  background-color: #005bb5;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -201,6 +231,13 @@
     );
     z-index: 1;
   }
+
+  .blogGrid {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 20px;
+  }
 }
 
 /* Tablet and Smaller Desktop */
@@ -227,33 +264,4 @@
   to {
     transform: rotate(0deg);
   }
-}
-
-.blogGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.blogCard {
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-}
-
-.readMore {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.readMore a {
-  padding: 10px 20px;
-  background-color: #0070f3;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.readMore a:hover {
-  background-color: #005bb5;
 }

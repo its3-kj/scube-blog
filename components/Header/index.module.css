@@ -1,17 +1,15 @@
 .header {
-  /* position: absolute; */
-  padding: 16px 24px 8px;
+  padding: 0 24px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
 }
 
 .logoLink {
   display: flex;
-  height: 48px;
   font-size: 36px;
+  text-decoration: none;
 }
 
 .logo {
@@ -22,21 +20,16 @@
 .items {
   display: flex;
   gap: 10px;
-  list-style-type: none; /* リストアイテムの前に点を表示しない */
-  padding: 10px; /* デフォルトのパディングを削除 */
-  margin: 0; /* デフォルトのマージンを削除 */
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
 }
 
 @media (max-width: 640px) {
   .header {
-    padding: 8px 16px 8px;
+    padding: 0 0 4px;
   }
-  /* .logo {
-    height: 16px;
-    width: auto;
-  } */
   .logoLink {
-    height: 24px;
     font-size: 20px;
   }
 }

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logoLink}>
-        IT Scube
+        ITScube Blog
       </Link>
       <Menu />
     </header>

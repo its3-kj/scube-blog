@@ -10,11 +10,6 @@ const HomePage = async () => {
   return (
     <div>
       <h1>最近の投稿</h1>
-      {/* <div>
-        {blogs.map((blog) => (
-          <BlogCard key={blog.id} blog={blog} />
-        ))}
-      </div> */}
       <div className={styles.blogGrid}>
         {recentBlogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />

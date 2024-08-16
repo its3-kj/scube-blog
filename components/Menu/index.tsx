@@ -26,23 +26,28 @@ export default function Menu() {
           </li>
         </ul>
 
-        <button
-          type="button"
-          className={cx(styles.button, styles.close)}
-          onClick={close}
-        >
-          <Image
-            src="/close.svg"
-            alt="閉じる"
-            width={24}
-            height={24}
-            priority
-          />
-        </button>
+        {isOpen && (
+          <button
+            type="button"
+            className={cx(styles.button, styles.close)}
+            onClick={close}
+          >
+            <Image
+              src="/close.svg"
+              alt="閉じる"
+              width={24}
+              height={24}
+              priority
+            />
+          </button>
+        )}
       </nav>
-      <button type="button" className={styles.button} onClick={open}>
-        <Image src="/menu.svg" alt="メニュー" width={24} height={24} />
-      </button>
+
+      {!isOpen && (
+        <button type="button" className={styles.button} onClick={open}>
+          <Image src="/menu.svg" alt="メニュー" width={24} height={24} />
+        </button>
+      )}
     </div>
   );
 }
